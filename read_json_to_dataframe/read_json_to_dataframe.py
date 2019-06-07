@@ -1,7 +1,9 @@
-import json
-import pandas as pd
+## Import neccessary python packages (API)
+import json # import json API
+import pandas as pd # import pandas API as pd
 
-df_list = []
+## Read the json file and extract the data needed
+df_list = [] # create an empty python list
 with open('tweet_json.txt', 'r') as json_file:
     for line in json_file:
         data = json.loads(line)
