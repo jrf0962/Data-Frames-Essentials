@@ -3,7 +3,7 @@ import json # import json API
 import pandas as pd # import pandas API as pd
 
 ## Read the json file and extract the data needed
-# create an empty python list.
+# Create an empty python list.
 df_list = []
 # Open the file as "json_file".
 with open('tweet_json.txt', 'r') as json_file:
@@ -21,5 +21,5 @@ with open('tweet_json.txt', 'r') as json_file:
                         'favorite_count': favorite_count})
 
 ## Create the Data Frame using the df_list
-# Here we can simply convert the list into a data frame.
+# Convert the list into a data frame.
 df_retweet = pd.DataFrame(df_list, columns = ['tweet_id', 'retweet_count', 'favorite_count'])
