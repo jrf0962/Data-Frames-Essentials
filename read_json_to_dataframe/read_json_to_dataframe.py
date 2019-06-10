@@ -19,6 +19,10 @@ with open('tweet_json.txt', 'r') as json_file:
         # Load that line into a variable called "data".
         # This "data" variable is actually a python dictionary.
         data = json.loads(line)
+        
+        # Now using this python dictionary, we can create variables to store data we need.
+        # In this particular case, we have three variables: "tweet_id", "retweet_count", and "favorite_count".
+        # We relate each of these variables to corresponding values in "data" dictionary by assigning the dictionary key.
         tweet_id = data['id']
         retweet_count = data['retweet_count']
         favorite_count = data['favorite_count']
