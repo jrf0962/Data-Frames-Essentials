@@ -27,9 +27,12 @@ with open('tweet_json.txt', 'r') as json_file:
         retweet_count = data['retweet_count']
         favorite_count = data['favorite_count']
         
+        # Now we can add the three variables as a single observation unit into the list ("df_list").
         df_list.append({'tweet_id': tweet_id,
                         'retweet_count': retweet_count,
                         'favorite_count': favorite_count})
+        # Once this "For" loop is done, we will have all the data rows we need saved in that list.
 
 ## Create the Data Frame using the df_list
+# Here we can simply convert the list into a data frame.
 df_retweet = pd.DataFrame(df_list, columns = ['tweet_id', 'retweet_count', 'favorite_count'])
