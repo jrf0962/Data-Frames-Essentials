@@ -15,7 +15,7 @@ with open('tweet_json.txt', 'r') as json_file:
         tweet_id = data['id']
         retweet_count = data['retweet_count']
         favorite_count = data['favorite_count']
-        # Add the three variables as a single observation unit into the list ("df_list").
+        # Add the variables as a single observation unit into the list ("df_list").
         df_list.append({'tweet_id': tweet_id,
                         'retweet_count': retweet_count,
                         'favorite_count': favorite_count})
